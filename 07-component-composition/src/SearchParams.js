@@ -46,7 +46,10 @@ const SearchParams = () => {
           <select
             id="animal"
             value={animal}
-            onChange={(e) => updateAnimal(e.target.value)}
+            onChange={(e) => {
+              updateAnimal(e.target.value)
+              updateBreed("");
+            }}
             onBlur={(e) => updateAnimal(e.target.value)}
           >
             <option />
